@@ -21,8 +21,6 @@ public class FruitController : MonoBehaviour
         for (int i = 0; i < spawnPoints.Length; i++)
         {
             Fruit fruit = Instantiate(prefabs[Random.Range(0,prefabs.Length)],spawnPoints[i]);
-            //fruit.transform.localScale = Vector3.zero;
-            //fruit.transform.DOScale(new Vector3(3f, 3f, 3f), 0.3f);
             fruit.Init(this);
             currentsFruits.Add(fruit);
         }
@@ -42,6 +40,7 @@ public class FruitController : MonoBehaviour
         currentsFruits.Remove(fruit);
         if (currentsFruits.Count <= 0)
         {
+            Debug.Log($"Test Finish");
             DOVirtual.DelayedCall(0.5f, CreatesFruits);
         }
     }

@@ -105,5 +105,4 @@ public class GameController : MonoBehaviour
         currentCard = card;
         sampleTime = 0f;
     }
-
 }
