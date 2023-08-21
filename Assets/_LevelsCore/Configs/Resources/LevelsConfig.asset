@@ -15,4 +15,4 @@ MonoBehaviour:
   configName: card
   sceneName: Game 1
   levels:
-  - levelView: {fileID: 8418711657256123622, guid: 9b7b666d5eeadf84ba3e7e4188e1544f, type: 3}
+  - levelView: {fileID: 1036757198406804185, guid: 9b7b666d5eeadf84ba3e7e4188e1544f, type: 3}
