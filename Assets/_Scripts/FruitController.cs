@@ -40,7 +40,7 @@ public class FruitController : MonoBehaviour
         currentsFruits.Remove(fruit);
         if (currentsFruits.Count <= 0)
         {
-            Debug.Log($"Test Finish");
+            Debug.LogError($"Test Finish");
             DOVirtual.DelayedCall(0.5f, CreatesFruits);
         }
     }
