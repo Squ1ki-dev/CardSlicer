@@ -9,6 +9,6 @@ public class LevelScreen : WindowBase
     [SerializeField] private TextMeshProUGUI scoresText;
     public void Show(LevelModel model)
     {
-        model.scores.SubscribeAndInvoke(scores => scoresText.text = scores.ToString());
+        model.scores.SubscribeAndInvoke(scores => scoresText.text = "Score: " + scores.ToString());
     }
 }

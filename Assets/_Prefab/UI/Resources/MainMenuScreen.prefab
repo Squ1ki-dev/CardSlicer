@@ -261,7 +261,9 @@ MonoBehaviour:
   <needHideThenWindowIsNotTop>k__BackingField: 0
   <isPriorityWindow>k__BackingField: 0
   active: 0
-  labyrinthBtn: {fileID: 7273782039950588129}
+  cardGameBtn: {fileID: 7273782039950588129}
+  invBtn: {fileID: 726987127349437526}
+  shopBtn: {fileID: 1110851511965553320}
   labyrinthLevelConfigs: {fileID: 11400000, guid: ed5a4363fa57a73429a27df9100e03bd, type: 2}
 --- !u!1 &2733450756267571541
 GameObject:
@@ -653,6 +655,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff343ba1d86eb27488bf9be675865ac2, type: 3}
+--- !u!114 &1110851511965553320 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3022784646071574421, guid: ff343ba1d86eb27488bf9be675865ac2, type: 3}
+  m_PrefabInstance: {fileID: 2781429128655555901}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1110851511965553333 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3022784646071574408, guid: ff343ba1d86eb27488bf9be675865ac2, type: 3}
@@ -760,3 +773,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2767589805294634565, guid: 96352d442221dfc4d995bd44ba305a74, type: 3}
   m_PrefabInstance: {fileID: 3206196468572856848}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &726987127349437526 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2767589805294634566, guid: 96352d442221dfc4d995bd44ba305a74, type: 3}
+  m_PrefabInstance: {fileID: 3206196468572856848}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

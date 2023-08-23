@@ -6,14 +6,13 @@ using UnityEngine.UI;
 
 public class MainMenuScreen : WindowBase
 {
-    [SerializeField] private Button  labyrinthBtn;//carBtn, bottleBtn, candyBtn,
-    [SerializeField] private LevelConfigs  labyrinthLevelConfigs;//carsLevelConfigs, bottleLevelConfigs, candyLevelConfigs,
+    [SerializeField] private Button cardGameBtn, invBtn, shopBtn;
+    [SerializeField] private LevelConfigs labyrinthLevelConfigs;//carsLevelConfigs, bottleLevelConfigs, candyLevelConfigs,
     public void Show()
     {
-        //SubscribeBtn(carBtn, carsLevelConfigs);
-        //SubscribeBtn(bottleBtn, bottleLevelConfigs);
-        //SubscribeBtn(candyBtn, candyLevelConfigs);
-        SubscribeBtn(labyrinthBtn, labyrinthLevelConfigs);
+        invBtn.OnClick(() => WindowManager.Instance.Show<PopupWindow>().Show());
+        shopBtn.OnClick(() => WindowManager.Instance.Show<PopupWindow>().Show());
+        SubscribeBtn(cardGameBtn, labyrinthLevelConfigs);
 
         void SubscribeBtn(Button btn, LevelConfigs configs)
         {
