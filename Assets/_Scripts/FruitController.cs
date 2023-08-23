@@ -12,14 +12,13 @@ public class FruitController : MonoBehaviour
     [SerializeField]
     private Transform[] spawnPoints;
     private List<Fruit> currentsFruits = new List<Fruit>(20);
-    int scores, attempts, maxAttempts;
-    Action<int> onComplete, onCatch;
-    public void Init(int attemptsCount, Action<int> onSliceFruit = null, Action<int> onCompleteSpawn = null)
+    public int fruitsCount => currentsFruits.Count;
+    int scores;
+    Action<int> onCatch;
+    public void Init(Action<int> onSliceFruit = null)
     {
         CreatesFruits();
-        onComplete = onCompleteSpawn;
         this.onCatch = onSliceFruit;
-        maxAttempts = attemptsCount;
     }
 
     public void CreatesFruits()
@@ -48,9 +47,7 @@ public class FruitController : MonoBehaviour
         onCatch?.Invoke(scores);
         if (currentsFruits.Count <= 0)
         {
-            attempts++;
-            if (attempts >= maxAttempts) onComplete?.Invoke(scores);
-            else DOVirtual.DelayedCall(0.5f, CreatesFruits);
+            // else DOVirtual.DelayedCall(0.5f, CreatesFruits);
         }
     }
 }

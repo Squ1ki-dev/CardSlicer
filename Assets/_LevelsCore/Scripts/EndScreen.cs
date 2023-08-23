@@ -7,13 +7,15 @@ using UnityEngine.SceneManagement;
 
 public class EndScreen : AnimatedWindowBase
 {
-    private SimplePresenter<RectTransform> presenter = new();
+    // private SimplePresenter<RectTransform> presenter = new();
     [SerializeField] private Button nextBtn, replayBtn, miniGameBtn;
+    [SerializeField] private RectTransform wonElement, deffeateElement;
     private string menuScene = "MainMenu";
     public void Show(LevelModel model)
     {
         //if(model == null) return;
-        
+        wonElement.SetActive(model.isWon);
+        deffeateElement.SetActive(!model.isWon);
         nextBtn.SetActive(model.isWon);
         nextBtn.OnClick(() =>
         {

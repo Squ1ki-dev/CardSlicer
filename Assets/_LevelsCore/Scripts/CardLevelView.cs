@@ -24,13 +24,14 @@ public class CardLevelView : BaseLevelView
     private float minX, maxX;
     [SerializeField]
     private int attemptsCount = 1;
+    int attempts = 0;
     [SerializeField]
     TrajectoryController trajectoryController;
     [SerializeField]
     FruitController fruitController;
     private float posX = 0;
     private bool isSelectTrajectory, isStartMove = false;
-
+    private bool gameCompleted;
 
     private void Awake() => Application.targetFrameRate = 60;
 
@@ -38,14 +39,10 @@ public class CardLevelView : BaseLevelView
     {
         this.model = model;
         WindowManager.Instance.Show<LevelScreen>().Show(model);
-        fruitController.Init(attemptsCount,
+        fruitController.Init(
             onSliceFruit: scores =>
             {
                 model.scores.value = scores;
-            },
-            onCompleteSpawn: scores =>
-            {
-                OnWonLevel();
             });
 
         CreateCard();
@@ -53,6 +50,7 @@ public class CardLevelView : BaseLevelView
 
     private void Update()
     {
+        if (gameCompleted) return;
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -100,13 +98,26 @@ public class CardLevelView : BaseLevelView
             }
             else if (sampleTime >= 1f)
             {
-                currentCard.DeactivateTrail();
-                currentCard.Dead();
-                currentCard = null;
-                isSelectTrajectory = false;
-                isStartMove = false;
-                CreateCard();
-                Debug.Log("Finish");
+                attempts++;
+                if (fruitController.fruitsCount <= 0)
+                {
+                    OnWonLevel();
+                    gameCompleted = true;
+                }
+                else if (attempts >= attemptsCount)
+                {
+                    OnLoseLevel();
+                    gameCompleted = true;
+                }
+                else
+                {
+                    currentCard.DeactivateTrail();
+                    currentCard.Dead();
+                    currentCard = null;
+                    isSelectTrajectory = false;
+                    isStartMove = false;
+                    CreateCard();
+                }
             }
         }
     }
