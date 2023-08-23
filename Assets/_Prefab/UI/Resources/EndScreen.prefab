@@ -529,6 +529,8 @@ MonoBehaviour:
   nextBtn: {fileID: 5858697496898085543}
   replayBtn: {fileID: 3317002200020006424}
   miniGameBtn: {fileID: 9147708299699480734}
+  wonElement: {fileID: 2806630729840975385}
+  deffeateElement: {fileID: 1608480558600446859}
 --- !u!1 &2926132598817926872
 GameObject:
   m_ObjectHideFlags: 0

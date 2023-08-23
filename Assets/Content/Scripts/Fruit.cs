@@ -41,6 +41,7 @@ public class Fruit : MonoBehaviour
         rb2.useGravity = true;
         rb2.AddForce(new Vector3(Random.Range(-1f, 1f), 1f, Random.Range(-1f, 1f)) * 1f, ForceMode.Impulse);
 
+        fruitController.RemoveFromList(this);
         DOVirtual.DelayedCall(2f, Dead);
     }
 
@@ -56,7 +57,6 @@ public class Fruit : MonoBehaviour
            if (parts[i]!=null)
                parts[i].gameObject.transform.DOScale(Vector3.zero, 1.2f);
         }
-        fruitController.RemoveFromList(this);
         Destroy(gameObject,1.2f);
     }
 
