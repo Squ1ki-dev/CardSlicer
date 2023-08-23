@@ -710,7 +710,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1743616121
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -744,7 +744,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a565e76dd588d474ea85e8fa7f09112c, type: 2}
+  - {fileID: 2100000, guid: fdb92de1575135a43949f0fa126536c8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -783,7 +783,7 @@ Transform:
   m_GameObject: {fileID: 1743616120}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 22.25}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalScale: {x: 9, y: 9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -921,13 +921,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1036757198406804185, guid: 9b7b666d5eeadf84ba3e7e4188e1544f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1606858615274334527, guid: 9b7b666d5eeadf84ba3e7e4188e1544f, type: 3}
       propertyPath: m_Name
       value: Level1
       objectReference: {fileID: 0}
     - target: {fileID: 1606858615274334527, guid: 9b7b666d5eeadf84ba3e7e4188e1544f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5430770084767465375, guid: 9b7b666d5eeadf84ba3e7e4188e1544f, type: 3}
       propertyPath: Control
@@ -979,4 +983,5 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1741615400867711045, guid: 9b7b666d5eeadf84ba3e7e4188e1544f, type: 3}
+    - {fileID: 1036757198406804185, guid: 9b7b666d5eeadf84ba3e7e4188e1544f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9b7b666d5eeadf84ba3e7e4188e1544f, type: 3}
