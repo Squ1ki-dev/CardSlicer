@@ -23,7 +23,11 @@ public class CardLevelView : BaseLevelView
     [SerializeField]
     private float minX, maxX;
     [SerializeField]
+    private int attemptsCount = 1;
+    [SerializeField]
     TrajectoryController trajectoryController;
+    [SerializeField]
+    FruitController fruitController;
     private float posX = 0;
     private bool isSelectTrajectory, isStartMove = false;
 
@@ -33,6 +37,17 @@ public class CardLevelView : BaseLevelView
     public override void Init(LevelModel model)
     {
         this.model = model;
+        WindowManager.Instance.Show<LevelScreen>().Show(model);
+        fruitController.Init(attemptsCount,
+            onSliceFruit: scores =>
+            {
+                model.scores.value = scores;
+            },
+            onCompleteSpawn: scores =>
+            {
+                OnWonLevel();
+            });
+
         CreateCard();
     }
 
@@ -75,7 +90,7 @@ public class CardLevelView : BaseLevelView
                 currentCard.ActivateTrail();
             }
         }
-        else if (!isSelectTrajectory && isStartMove && currentCard!=null)
+        else if (!isSelectTrajectory && isStartMove && currentCard != null)
         {
             sampleTime += Time.deltaTime * speed;
             currentCard.transform.position = curve.Evaluate(sampleTime);

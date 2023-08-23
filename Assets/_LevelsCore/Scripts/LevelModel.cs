@@ -12,8 +12,7 @@ public class LevelModel
         this.levelIdx = levelIdx;
     }
     public LevelConfigs configs;
-    public Reactive<int> starCountReactive = new Reactive<int>();
+    public Reactive<int> scores = new Reactive<int>();
     public bool isWon;
-    [field: SerializeField] public int StarCount {get; private set; }
     public int levelIdx;
 }

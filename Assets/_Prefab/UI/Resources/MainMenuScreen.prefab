@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 8224327748210252587}
   - component: {fileID: 667167853459496134}
   - component: {fileID: 1329800272005906506}
-  - component: {fileID: 3462192408869959994}
+  - component: {fileID: 4741148813298134870}
   m_Layer: 5
   m_Name: MainMenuScreen
   m_TagString: Untagged
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &3462192408869959994
+--- !u!114 &4741148813298134870
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -253,7 +253,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2559781337939116574}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57979801f74a76441aa1e657ff342697, type: 3}
+  m_Script: {fileID: 11500000, guid: 52b8c89e4d3108749a1425d617371da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   <closeButton>k__BackingField: {fileID: 0}
@@ -261,6 +261,8 @@ MonoBehaviour:
   <needHideThenWindowIsNotTop>k__BackingField: 0
   <isPriorityWindow>k__BackingField: 0
   active: 0
+  labyrinthBtn: {fileID: 7273782039950588129}
+  labyrinthLevelConfigs: {fileID: 11400000, guid: ed5a4363fa57a73429a27df9100e03bd, type: 2}
 --- !u!1 &2733450756267571541
 GameObject:
   m_ObjectHideFlags: 0
