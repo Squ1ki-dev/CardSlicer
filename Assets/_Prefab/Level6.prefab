@@ -58,7 +58,7 @@ MonoBehaviour:
   speed: 1
   minX: -7
   maxX: 7
-  attemptsCount: 1
+  attemptsCount: 3
   trajectoryController: {fileID: 5573920880031667545}
   fruitController: {fileID: 1741615400867711045}
 --- !u!1 &1623699195436877388
@@ -185,6 +185,7 @@ GameObject:
   - component: {fileID: 5706439069001845892}
   - component: {fileID: 3545716737537520867}
   - component: {fileID: 8223805503772868964}
+  - component: {fileID: 2718478759126491008}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -200,7 +201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8295717273736949620}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.43699, y: 1.581969, z: 3.96}
+  m_LocalPosition: {x: 6.92, y: 1.581969, z: 3.96}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -270,6 +271,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2718478759126491008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8295717273736949620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c920a6ab25ce2245bbb2b49936a0765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isXMove: 1
+  isYMove: 0
+  moveDistance: 6
+  moveDuration: 2
 --- !u!1 &8935311836680159031
 GameObject:
   m_ObjectHideFlags: 0

@@ -57,7 +57,7 @@ MonoBehaviour:
   speed: 1
   minX: -7
   maxX: 7
-  attemptsCount: 1
+  attemptsCount: 3
   trajectoryController: {fileID: 5573920880031667545}
   fruitController: {fileID: 1741615400867711045}
 --- !u!1 &1623699195436877388

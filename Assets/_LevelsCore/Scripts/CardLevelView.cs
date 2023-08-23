@@ -111,18 +111,23 @@ public class CardLevelView : BaseLevelView
                 }
                 else
                 {
-                    currentCard.DeactivateTrail();
-                    currentCard.Dead();
-                    currentCard = null;
-                    isSelectTrajectory = false;
-                    isStartMove = false;
-                    CreateCard();
+                    RespawnCard();
                 }
             }
         }
     }
 
-    private void CreateCard()
+    public void RespawnCard()
+    {
+        currentCard.DeactivateTrail();
+        currentCard.Dead();
+        currentCard = null;
+        isSelectTrajectory = false;
+        isStartMove = false;
+        CreateCard();
+    }
+
+    public void CreateCard()
     {
         Card card = Instantiate(cardPrefab, spawnPos);
         card.transform.localScale = Vector3.zero;

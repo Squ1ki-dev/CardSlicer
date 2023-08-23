@@ -10,6 +10,13 @@ public class Card : MonoBehaviour
     private Fruit temp;
     private bool yes = true;
 
+    CardLevelView cardLevelView;
+
+    public void SetCardLevelView(CardLevelView cardView)
+    {
+        cardLevelView = cardView;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         Fruit fruit = other.GetComponentInParent<Fruit>();
@@ -19,6 +26,15 @@ public class Card : MonoBehaviour
             temp = fruit;
             fruit.Spliit(new PointPlane(transform.position, transform.rotation));
         }
+
+        //cardLevelView = FindObjectOfType<CardLevelView>();
+
+        CubeMovement cube = other.GetComponent<CubeMovement>();
+        if(cube)
+        {
+            Debug.LogError($"DEAD");
+            cardLevelView.RespawnCard();
+        }        
     }
 
     public void Dead()

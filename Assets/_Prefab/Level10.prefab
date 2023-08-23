@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2918657851146086519}
   - component: {fileID: 8164419500563028657}
   - component: {fileID: 4740775928774636232}
+  - component: {fileID: 1349036237723708654}
   m_Layer: 0
   m_Name: UpDown
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 241381473161034495}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.43699, y: 1.581969, z: -3.92}
+  m_LocalPosition: {x: 14, y: 1.581969, z: -3.92}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -97,6 +98,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1349036237723708654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241381473161034495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c920a6ab25ce2245bbb2b49936a0765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isXMove: 1
+  isYMove: 0
+  moveDistance: -8
+  moveDuration: 2.5
 --- !u!1 &1606858615274334527
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +173,7 @@ MonoBehaviour:
   speed: 1
   minX: -7
   maxX: 7
-  attemptsCount: 1
+  attemptsCount: 3
   trajectoryController: {fileID: 5573920880031667545}
   fruitController: {fileID: 1741615400867711045}
 --- !u!1 &1623699195436877388
@@ -286,6 +303,7 @@ GameObject:
   - component: {fileID: 331749870139024395}
   - component: {fileID: 5920244051040718264}
   - component: {fileID: 3299390162706918161}
+  - component: {fileID: 6081567064135982465}
   m_Layer: 0
   m_Name: LeftRight
   m_TagString: Untagged
@@ -301,7 +319,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7601057022905884337}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.43699, y: 1.581969, z: 4.47}
+  m_LocalPosition: {x: 6.98, y: 1.581969, z: 4.47}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -371,6 +389,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6081567064135982465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7601057022905884337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c920a6ab25ce2245bbb2b49936a0765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isXMove: 1
+  isYMove: 0
+  moveDistance: 8
+  moveDuration: 2.5
 --- !u!1 &8935311836680159031
 GameObject:
   m_ObjectHideFlags: 0
